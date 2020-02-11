@@ -1,1 +1,17 @@
 docker run --name postgres-spring -e POSTGRES_PASSWORD=Tele63741! -d -p 5432:5432 postgres:alpine
+
+docker exec -it [container id] bin/bash -> psql -U postgres
+or
+docker exec -u postgres -it d238ed6f7edd bin/bash //in intellij terminal
+
+//  download from https://plugins.jetbrains.com/plugin/7724-docker
+
+\l : list of dbS
+
+//CREATE DATABASE spring-boot-postgres-db; -> cannot have - in name
+CREATE DATABASE demodb;
+
+\c demodb : connect to demodb
+\d : for everything
+\dt : for tables only
+
